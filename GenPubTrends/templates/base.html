@@ -1,0 +1,36 @@
+    <form action="" method="post" novalidate>
+        <p>
+            {{ form.disease_name.label }}<br>
+            {{ form.disease_name(size=32) }}<br>
+            {% if form.disease_name.errors %}
+                <font size="2", color="red">{% for error in form.disease_name.errors %}{{ error }}{% endfor %}</font>
+            {% endif %}
+        </p>
+
+
+
+        <p>
+            {{ form.start_time.label }}<br>
+            {{ form.start_time(size=32) }}<br>
+            <font size = 2>(Format = year/month/day)</font>
+            {% if form.start_time.errors %}
+                <font size="2", color="red">{% for error in form.start_time.errors %}{{ error }}{% endfor %}</font>
+            {% endif %}
+        </p>
+
+
+
+
+        <p>
+            {{ form.end_time.label }}<br>
+            {{ form.end_time(size=32) }} <br>
+            <font size = 2>(Format = year/month/day)</font>
+            {% if form.end_time.errors %}
+                <font size="2", color="red">{% for error in form.end_time.errors %}{{ error }}{% endfor %}</font>
+            {% endif %}</p>
+
+
+
+        <p>{{ form.submit_field() }} </p>
+
+    </form>
