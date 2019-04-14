@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
-from main.forms import SearchForm
-from main.pubmed_utils.entrez_search import SearchReport
+from GenPubTrends.main.forms import SearchForm
+from GenPubTrends.main.pubmed_utils.entrez_search import SearchReport
 
 
 main = Blueprint('main', __name__)
