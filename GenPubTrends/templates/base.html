@@ -12,7 +12,7 @@
         <p>
             {{ form.start_time.label }}<br>
             {{ form.start_time(size=32) }}<br>
-            <font size = 2>(Format = year/month/day)</font>
+            <font size = 2>(Format = YYYY)</font>
             {% if form.start_time.errors %}
                 <font size="2", color="red">{% for error in form.start_time.errors %}{{ error }}{% endfor %}</font>
             {% endif %}
@@ -24,7 +24,7 @@
         <p>
             {{ form.end_time.label }}<br>
             {{ form.end_time(size=32) }} <br>
-            <font size = 2>(Format = year/month/day)</font>
+            <font size = 2>(Format = YYYY)</font>
             {% if form.end_time.errors %}
                 <font size="2", color="red">{% for error in form.end_time.errors %}{{ error }}{% endfor %}</font>
             {% endif %}</p>
